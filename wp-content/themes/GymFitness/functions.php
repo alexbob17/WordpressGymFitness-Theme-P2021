@@ -12,7 +12,7 @@ function gymFitness_setup(){
     add_image_size( 'square', 350, 350, true);
     add_image_size( 'portrait', 350, 724, true);
     add_image_size( 'cajas', 400, 375, true);
-    add_image_size( 'mediano',700, 400, true);
+    add_image_size( 'mediano',500, 400, true);
     add_image_size( 'blog', 966, 644, true);
 }
 
