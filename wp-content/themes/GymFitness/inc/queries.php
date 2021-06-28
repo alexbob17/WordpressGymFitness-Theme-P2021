@@ -5,12 +5,28 @@ function gymFitness_lista_clases(){?>
     <?php
         $args = array(
             'post_type' => 'gymfitness_clases',
-            'post_per_page' => 10
+            'post_per_page' => 10,
+            'orderby' => 'title'
         );
         $clases = new WP_Query($args);
-        While($clases->have_posts()):
-    
-     ?>
+        While($clases->have_posts()):$clases->the_post();?>
+
+        <li class="clase card">
+        <?php the_post_thumbnail('mediano');?>
+        <div class="contenido">
+            <a href="<?php the_permalink();?>">
+                <h3><?php the_title();?></h3>
+            </a>            
+            <?php 
+                $hora_inicio= get_field('hora_inicio');
+                $hora_fin= get_field('hora_fin');
+            ?>
+            <p><?php the_field('dias_clases');?> a <?php echo $hora_inicio . " - " . $hora_fin;?></p>
+        </div>
+        </li>
+
+         <?php endwhile; wp_reset_postdata();?>
+
     </ul>
 
 <?php
