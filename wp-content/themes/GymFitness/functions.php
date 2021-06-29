@@ -52,3 +52,19 @@ function gymFitness_scripts_styles(){
 }
 
 add_action('wp_enqueue_scripts', 'gymFitness_scripts_styles');
+
+
+//Definir los widgets
+
+function gymFitness_widgets(){
+    register_sidebar( array (
+        'name' => 'Sidebar 1',
+        'id' => 'sidebar_1',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
+
+add_action('widgets_init','gymFitness_widgets' );

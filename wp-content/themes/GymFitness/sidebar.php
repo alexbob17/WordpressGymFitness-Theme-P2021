@@ -1,14 +1,6 @@
 <!-- Obtenemos la pagina de header -->
-<?php get_header(); ?>
-
-    <main class="contenedor pagina seccion con-sidebar">
-        <div class="contenido-principal">
-            <?php get_template_part('template-parts/paginas');?>
-        </div>
-        <?php get_sidebar(); ?>
-    </main>
-
-
-<!-- Obtenemos el footer -->
-<?php get_footer(); ?>
-
+<aside class="sidebar">
+  <?php
+    dinamic_sidebar('sidebar_1') 
+  ?>
+</aside>

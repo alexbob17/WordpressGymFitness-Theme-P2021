@@ -7,6 +7,8 @@
 
             <?php gymFitness_lista_clases();?>
 
+        <?php get_sidebar();  ?>
+ 
         </div>        
     </main>
 
